@@ -1,18 +1,19 @@
 ---
 const currentYear = new Date().getFullYear();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const quickLinks = [
-  { label: 'Videos', href: '/videos' },
-  { label: 'Podcasts', href: '/podcasts' },
-  { label: 'Library', href: '/library' },
-  { label: 'About', href: '/about' },
+  { label: 'Videos', href: `${base}/videos` },
+  { label: 'Podcasts', href: `${base}/podcasts` },
+  { label: 'Library', href: `${base}/library` },
+  { label: 'About', href: `${base}/about` },
 ];
 
 const categories = [
-  { label: 'Vedas', href: '/library#vedas' },
-  { label: 'Puranas', href: '/library#puranas' },
-  { label: 'Bhagavad Gita', href: '/library#gita' },
-  { label: 'Upanishads', href: '/library#upanishads' },
+  { label: 'Vedas', href: `${base}/library#vedas` },
+  { label: 'Puranas', href: `${base}/library#puranas` },
+  { label: 'Bhagavad Gita', href: `${base}/library#gita` },
+  { label: 'Upanishads', href: `${base}/library#upanishads` },
 ];
 ---
 

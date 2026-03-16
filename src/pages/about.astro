@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const values = [
   {
     title: 'Authenticity',
@@ -28,17 +30,17 @@ const offerings = [
   {
     title: 'Video Content',
     description: 'Sacred songs, mantras, and hymns from Vedic literature — with pronunciation, meaning, and significance. Published on our YouTube channel.',
-    link: '/videos',
+    link: `${base}/videos`,
   },
   {
     title: 'Spiritual Podcasts',
     description: 'In-depth discussions on dharma, karma, meditation, and philosophical topics from the scriptures. Coming soon.',
-    link: '/podcasts',
+    link: `${base}/podcasts`,
   },
   {
     title: 'Scripture Library',
     description: 'An encyclopaedic guide to the Vedas, Puranas, Bhagavad Gita, Upanishads, and other sacred texts — organized for exploration.',
-    link: '/library',
+    link: `${base}/library`,
   },
 ];
 ---

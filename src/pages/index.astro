@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const featuredVideos = [
   {
     title: 'Gayatri Mantra — Meaning & Significance',
@@ -91,10 +93,10 @@ const categories = [
         and spiritual insights.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/videos" class="btn-primary text-lg px-8 py-4">
+        <a href={`${base}/videos`} class="btn-primary text-lg px-8 py-4">
           Watch Videos
         </a>
-        <a href="/library" class="btn-secondary border-white text-white hover:bg-white hover:text-krishna-800 text-lg px-8 py-4">
+        <a href={`${base}/library`} class="btn-secondary border-white text-white hover:bg-white hover:text-krishna-800 text-lg px-8 py-4">
           Explore Scriptures
         </a>
       </div>
@@ -122,7 +124,7 @@ const categories = [
           philosophy of the Upanishads, or simply find peace through devotional music —
           VedPuraan is your companion on this spiritual journey.
         </p>
-        <a href="/about" class="text-saffron-600 font-semibold hover:text-saffron-700 transition-colors">
+        <a href={`${base}/about`} class="text-saffron-600 font-semibold hover:text-saffron-700 transition-colors">
           Learn more about our mission &rarr;
         </a>
       </div>
@@ -165,7 +167,7 @@ const categories = [
       </div>
 
       <div class="text-center mt-10">
-        <a href="/videos" class="btn-secondary">
+        <a href={`${base}/videos`} class="btn-secondary">
           View All Videos &rarr;
         </a>
       </div>
@@ -182,7 +184,7 @@ const categories = [
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map((cat) => (
-          <a href={`/library#${cat.name.toLowerCase().replace(/\s+/g, '-')}`} class="card p-6 group hover:border-saffron-200 border border-transparent transition-all">
+          <a href={`${base}/library#${cat.name.toLowerCase().replace(/\s+/g, '-')}`} class="card p-6 group hover:border-saffron-200 border border-transparent transition-all">
             <div class="flex items-start gap-4">
               <span class="text-3xl">{cat.icon}</span>
               <div>
@@ -260,7 +262,7 @@ const categories = [
           <p class="text-sm text-krishna-300">The universe as described in the Puranas — cycles of creation and dissolution.</p>
         </div>
       </div>
-      <a href="/podcasts" class="btn-primary">
+      <a href={`${base}/podcasts`} class="btn-primary">
         Explore Podcasts &rarr;
       </a>
     </div>
