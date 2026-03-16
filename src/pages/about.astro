@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const values = [
+  {
+    title: 'Authenticity',
+    description: 'Every piece of content is rooted in original Sanskrit texts, with careful translation and context — never oversimplified or misrepresented.',
+    icon: '📜',
+  },
+  {
+    title: 'Accessibility',
+    description: 'Ancient wisdom should not be locked behind language barriers. We provide transliterations, translations, and explanations for all levels.',
+    icon: '🌏',
+  },
+  {
+    title: 'Devotion',
+    description: 'Our work is an offering — created with reverence for the sacred tradition and love for seekers on the spiritual path.',
+    icon: '🙏',
+  },
+  {
+    title: 'Community',
+    description: 'We believe spiritual growth happens together. VedPuraan is built for everyone curious about the timeless teachings of Sanatan Dharma.',
+    icon: '🙏',
+  },
+];
+
+const offerings = [
+  {
+    title: 'Video Content',
+    description: 'Sacred songs, mantras, and hymns from Vedic literature — with pronunciation, meaning, and significance. Published on our YouTube channel.',
+    link: '/videos',
+  },
+  {
+    title: 'Spiritual Podcasts',
+    description: 'In-depth discussions on dharma, karma, meditation, and philosophical topics from the scriptures. Coming soon.',
+    link: '/podcasts',
+  },
+  {
+    title: 'Scripture Library',
+    description: 'An encyclopaedic guide to the Vedas, Puranas, Bhagavad Gita, Upanishads, and other sacred texts — organized for exploration.',
+    link: '/library',
+  },
+];
+---
+
+<Layout title="About" description="Learn about VedPuraan's mission to make the timeless wisdom of Sanatan Dharma accessible to all.">
+  <!-- Page Header -->
+  <section class="gradient-krishna py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
+        About VedPuraan
+      </h1>
+      <p class="text-xl text-krishna-200 max-w-3xl mx-auto leading-relaxed">
+        A humble effort to bring the timeless wisdom of Sanatan Dharma
+        to seekers across the world — through sacred music, meaningful discourse,
+        and encyclopaedic exploration of ancient scriptures.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="font-sanskrit text-saffron-600 text-lg mb-4">तमसो मा ज्योतिर्गमय</p>
+        <p class="text-sm text-krishna-500 italic mb-8">From darkness, lead me to light.</p>
+      </div>
+
+      <div class="prose prose-lg max-w-none text-krishna-700 leading-relaxed space-y-6">
+        <p>
+          The Vedas, Puranas, Upanishads, and Bhagavad Gita contain some of humanity's
+          most profound insights into the nature of existence, consciousness, and the path
+          to liberation. Yet for many, these texts remain inaccessible — separated by
+          language, context, and centuries of time.
+        </p>
+        <p>
+          <strong class="text-krishna-800">VedPuraan</strong> was created to bridge that gap. Our mission is to
+          present these sacred teachings in a way that honours their depth while making
+          them approachable for modern seekers — whether you are a lifelong practitioner
+          or discovering Sanatan Dharma for the first time.
+        </p>
+        <p>
+          Through video content featuring sacred songs with word-by-word meanings,
+          podcast discussions exploring spiritual concepts, and a growing reference library
+          of scriptures — we aim to be a trusted companion on your journey of understanding.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-20 bg-temple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Our Values</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        {values.map((value) => (
+          <div class="text-center p-6">
+            <span class="text-4xl mb-4 block">{value.icon}</span>
+            <h3 class="font-heading font-semibold text-krishna-800 text-lg mb-2">{value.title}</h3>
+            <p class="text-sm text-krishna-500 leading-relaxed">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">What We Offer</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+        {offerings.map((item) => (
+          <a href={item.link} class="card p-8 group border border-temple-200 hover:border-saffron-300 transition-all">
+            <h3 class="font-heading font-semibold text-krishna-800 text-xl mb-3 group-hover:text-saffron-600 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-krishna-500 leading-relaxed mb-4">{item.description}</p>
+            <span class="text-saffron-600 font-semibold text-sm group-hover:text-saffron-700 transition-colors">
+              Explore &rarr;
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-20 bg-krishna-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-heading font-bold text-white mb-4">
+        Join the Journey
+      </h2>
+      <p class="text-krishna-300 text-lg mb-8">
+        Subscribe on YouTube, share our content, or reach out with questions and suggestions.
+        Together, let us rediscover the light of Vedic wisdom.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="https://youtube.com/@vedpuraan"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Subscribe on YouTube
+        </a>
+        <a href="mailto:contact@vedpuraan.com" class="btn-secondary border-white text-white hover:bg-white hover:text-krishna-800">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,106 @@
+---
+const currentYear = new Date().getFullYear();
+
+const quickLinks = [
+  { label: 'Videos', href: '/videos' },
+  { label: 'Podcasts', href: '/podcasts' },
+  { label: 'Library', href: '/library' },
+  { label: 'About', href: '/about' },
+];
+
+const categories = [
+  { label: 'Vedas', href: '/library#vedas' },
+  { label: 'Puranas', href: '/library#puranas' },
+  { label: 'Bhagavad Gita', href: '/library#gita' },
+  { label: 'Upanishads', href: '/library#upanishads' },
+];
+---
+
+<footer class="bg-krishna-900 text-krishna-200">
+  <!-- Decorative border -->
+  <div class="h-1 gradient-saffron"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-full gradient-saffron flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-sm">Om</span>
+          </div>
+          <span class="text-xl font-heading font-bold text-white">VedPuraan</span>
+        </div>
+        <p class="text-sm text-krishna-300 leading-relaxed">
+          Exploring the timeless wisdom of Sanatan Dharma through sacred texts,
+          devotional music, and spiritual discourse.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          {quickLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-krishna-300 hover:text-saffron-400 transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Scriptures -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Scriptures</h3>
+        <ul class="space-y-2">
+          {categories.map((cat) => (
+            <li>
+              <a href={cat.href} class="text-sm text-krishna-300 hover:text-saffron-400 transition-colors">
+                {cat.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Connect</h3>
+        <div class="space-y-3">
+          <a
+            href="https://youtube.com/@vedpuraan"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 text-sm text-krishna-300 hover:text-saffron-400 transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" />
+              <path fill="#fff" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            YouTube
+          </a>
+          <a
+            href="mailto:contact@vedpuraan.com"
+            class="flex items-center gap-2 text-sm text-krishna-300 hover:text-saffron-400 transition-colors"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            contact@vedpuraan.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-krishna-700 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-krishna-400">
+        &copy; {currentYear} VedPuraan. All rights reserved.
+      </p>
+      <p class="text-xs text-krishna-500 sanskrit-text">
+        &#x0964; &#x0935;&#x0938;&#x0941;&#x0927;&#x0948;&#x0935; &#x0915;&#x0941;&#x091F;&#x0941;&#x092E;&#x094D;&#x092C;&#x0915;&#x092E;&#x094D; &#x0964;
+      </p>
+    </div>
+  </div>
+</footer>

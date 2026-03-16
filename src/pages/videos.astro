@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const videoCategories = [
+  {
+    name: 'Vedic Hymns & Mantras',
+    videos: [
+      { title: 'Gayatri Mantra — Complete Meaning', category: 'Rigveda', duration: '12:30', youtubeId: 'PLACEHOLDER' },
+      { title: 'Mahamrityunjaya Mantra Explained', category: 'Rigveda', duration: '15:45', youtubeId: 'PLACEHOLDER' },
+      { title: 'Purusha Suktam — Hymn of the Cosmic Being', category: 'Rigveda', duration: '20:00', youtubeId: 'PLACEHOLDER' },
+    ],
+  },
+  {
+    name: 'Bhagavad Gita',
+    videos: [
+      { title: 'Chapter 2: Sankhya Yoga — The Eternal Soul', category: 'Gita', duration: '25:00', youtubeId: 'PLACEHOLDER' },
+      { title: 'Chapter 4: Jnana Karma Sanyasa Yoga', category: 'Gita', duration: '22:15', youtubeId: 'PLACEHOLDER' },
+      { title: 'Chapter 12: Bhakti Yoga — The Path of Devotion', category: 'Gita', duration: '18:30', youtubeId: 'PLACEHOLDER' },
+    ],
+  },
+  {
+    name: 'Stotrams & Devotional',
+    videos: [
+      { title: 'Shiv Tandav Stotram with Meaning', category: 'Stotram', duration: '14:20', youtubeId: 'PLACEHOLDER' },
+      { title: 'Vishnu Sahasranama — 1000 Names', category: 'Stotram', duration: '30:00', youtubeId: 'PLACEHOLDER' },
+      { title: 'Hanuman Chalisa — Verse by Verse', category: 'Devotional', duration: '28:00', youtubeId: 'PLACEHOLDER' },
+    ],
+  },
+];
+
+const filters = ['All', 'Vedic Hymns', 'Bhagavad Gita', 'Stotrams', 'Puranas', 'Upanishads'];
+---
+
+<Layout title="Videos" description="Watch sacred Vedic songs, hymns, and mantras with meanings and translations from ancient Indian scriptures.">
+  <!-- Page Header -->
+  <section class="gradient-krishna py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+        Sacred Videos
+      </h1>
+      <p class="text-lg text-krishna-200 max-w-2xl mx-auto">
+        Vedic songs, mantras, and hymns from ancient scriptures — with pronunciation,
+        meaning, and spiritual significance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="bg-white border-b border-temple-200 sticky top-16 md:top-20 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 py-3 overflow-x-auto scrollbar-hide">
+        {filters.map((filter, i) => (
+          <button
+            class:list={[
+              'px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors',
+              i === 0
+                ? 'bg-saffron-500 text-white'
+                : 'bg-temple-100 text-krishna-600 hover:bg-saffron-100 hover:text-saffron-700',
+            ]}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Grid -->
+  <section class="py-16 bg-temple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {videoCategories.map((section) => (
+        <div class="mb-16 last:mb-0">
+          <h2 class="text-2xl font-heading font-bold text-krishna-800 mb-6 flex items-center gap-3">
+            <span class="w-1 h-8 bg-saffron-500 rounded-full"></span>
+            {section.name}
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {section.videos.map((video) => (
+              <div class="card group cursor-pointer">
+                <div class="relative aspect-video bg-krishna-100 flex items-center justify-center">
+                  <svg class="w-14 h-14 text-saffron-400 group-hover:text-saffron-500 group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  <span class="absolute top-3 left-3 bg-krishna-800/80 text-white text-xs font-medium px-2 py-0.5 rounded">
+                    {video.category}
+                  </span>
+                  <span class="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-0.5 rounded">
+                    {video.duration}
+                  </span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-krishna-800 group-hover:text-saffron-600 transition-colors">
+                    {video.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- YouTube CTA -->
+      <div class="mt-12 text-center bg-white rounded-2xl p-10 shadow-sm">
+        <h3 class="text-2xl font-heading font-bold text-krishna-800 mb-3">
+          More on YouTube
+        </h3>
+        <p class="text-krishna-500 mb-6 max-w-lg mx-auto">
+          Subscribe to our channel for new videos on Vedic literature, sacred music,
+          and spiritual teachings — released regularly.
+        </p>
+        <a
+          href="https://youtube.com/@vedpuraan"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+            <path fill="#fff" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          Visit Our YouTube Channel
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

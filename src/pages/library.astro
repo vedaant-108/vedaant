@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const scriptures = [
+  {
+    id: 'vedas',
+    name: 'The Vedas',
+    sanskrit: 'वेद',
+    description: 'The four Vedas are the oldest and most authoritative scriptures of Sanatan Dharma — revealed knowledge (Shruti) that forms the bedrock of Vedic tradition.',
+    items: [
+      { name: 'Rigveda', detail: 'Hymns of praise and cosmic knowledge — 1,028 suktas organized in 10 mandalas.' },
+      { name: 'Yajurveda', detail: 'Liturgical formulas and rituals — the Veda of worship and sacrifice.' },
+      { name: 'Samaveda', detail: 'The Veda of melodies — musical arrangements of Rigvedic verses for chanting.' },
+      { name: 'Atharvaveda', detail: 'Hymns of daily life — healing, protection, and philosophical inquiry.' },
+    ],
+  },
+  {
+    id: 'puranas',
+    name: 'The Puranas',
+    sanskrit: 'पुराण',
+    description: 'Eighteen Mahapuranas narrate the history of the universe, genealogies of gods, sages, and kings, and the principles of dharma through stories.',
+    items: [
+      { name: 'Vishnu Purana', detail: 'Devoted to Lord Vishnu — creation, kings, and the avatars.' },
+      { name: 'Shiva Purana', detail: 'The glories of Lord Shiva — his forms, abodes, and cosmic role.' },
+      { name: 'Bhagavata Purana', detail: 'The crown jewel — the life and teachings of Lord Krishna.' },
+      { name: 'Markandeya Purana', detail: 'Contains the Devi Mahatmyam — the glory of the Divine Mother.' },
+    ],
+  },
+  {
+    id: 'gita',
+    name: 'Bhagavad Gita',
+    sanskrit: 'भगवद्गीता',
+    description: 'The Song of God — 700 verses across 18 chapters where Lord Krishna imparts the essence of Vedic wisdom to Arjuna on the battlefield of Kurukshetra.',
+    items: [
+      { name: 'Karma Yoga', detail: 'The yoga of selfless action — performing duty without attachment to results.' },
+      { name: 'Jnana Yoga', detail: 'The yoga of knowledge — discerning the real from the unreal.' },
+      { name: 'Bhakti Yoga', detail: 'The yoga of devotion — surrender and love as the path to the Divine.' },
+      { name: 'Dhyana Yoga', detail: 'The yoga of meditation — stilling the mind to realize the Self.' },
+    ],
+  },
+  {
+    id: 'upanishads',
+    name: 'The Upanishads',
+    sanskrit: 'उपनिषद्',
+    description: 'Philosophical texts forming the concluding part of the Vedas (Vedanta). They explore the nature of reality, consciousness, Atman, and Brahman.',
+    items: [
+      { name: 'Isha Upanishad', detail: 'The Lord pervades all — living in the world with detachment and wisdom.' },
+      { name: 'Kena Upanishad', detail: '"By whom?" — inquiry into the power behind the senses and mind.' },
+      { name: 'Katha Upanishad', detail: 'Nachiketa\'s dialogue with Yama — the secret of death and immortality.' },
+      { name: 'Mandukya Upanishad', detail: 'The nature of Om and the four states of consciousness.' },
+    ],
+  },
+  {
+    id: 'others',
+    name: 'Other Texts',
+    sanskrit: 'अन्य ग्रन्थ',
+    description: 'The vast Vedic tradition includes many supporting texts — Vedangas, Upa-Vedas, Smritis, Sutras, and more — each serving a unique purpose in preserving and transmitting knowledge.',
+    items: [
+      { name: 'Vedangas', detail: 'Six auxiliary disciplines: Shiksha, Chandas, Vyakarana, Nirukta, Jyotisha, Kalpa.' },
+      { name: 'Upa-Vedas', detail: 'Applied knowledge: Ayurveda (health), Dhanurveda (warfare), Gandharvaveda (arts), Sthapatyaveda (architecture).' },
+      { name: 'Dharma Sutras', detail: 'Texts on righteous conduct, social duties, and ethical living.' },
+      { name: 'Samhitas', detail: 'The mantra/hymn collections that form the core textual layer of each Veda.' },
+    ],
+  },
+];
+
+const faq = [
+  {
+    q: 'What are the Vedas?',
+    a: 'The Vedas are the oldest sacred texts of Sanatan Dharma, considered Shruti (revealed knowledge). There are four Vedas: Rigveda, Yajurveda, Samaveda, and Atharvaveda. They contain hymns, rituals, philosophy, and guidance for spiritual living.',
+  },
+  {
+    q: 'What is the difference between Shruti and Smriti?',
+    a: 'Shruti ("that which is heard") refers to the Vedas and Upanishads — eternal truths revealed to ancient rishis. Smriti ("that which is remembered") includes texts like the Puranas, Epics (Ramayana, Mahabharata), and Dharma Shastras — composed by sages based on Shruti.',
+  },
+  {
+    q: 'How do I start studying the Bhagavad Gita?',
+    a: 'Begin with a translation that includes commentary. Chapter 2 (Sankhya Yoga) is a great starting point as it contains the core teachings on the nature of the soul. Our video series walks through each chapter with meaning and context.',
+  },
+  {
+    q: 'What language are the scriptures in?',
+    a: 'The original texts are in Sanskrit. Our content provides Sanskrit verses alongside transliteration, word-by-word meaning, and accessible English translations to make the wisdom approachable for all.',
+  },
+];
+---
+
+<Layout title="Library" description="Encyclopaedic guide to Vedic scriptures — Vedas, Puranas, Bhagavad Gita, Upanishads, and more.">
+  <!-- Page Header -->
+  <section class="gradient-divine py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+        Scripture Library
+      </h1>
+      <p class="text-lg text-krishna-200 max-w-2xl mx-auto">
+        Your encyclopaedic guide to the sacred texts of Sanatan Dharma — from the Vedas
+        to the Puranas, organized for seekers at every stage of their journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick Nav -->
+  <section class="bg-white border-b border-temple-200 sticky top-16 md:top-20 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-4 py-3 overflow-x-auto scrollbar-hide">
+        {scriptures.map((s) => (
+          <a
+            href={`#${s.id}`}
+            class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap bg-temple-100 text-krishna-600 hover:bg-saffron-100 hover:text-saffron-700 transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripture Sections -->
+  <section class="py-16 bg-temple-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {scriptures.map((section) => (
+        <div id={section.id} class="mb-20 last:mb-0 scroll-mt-32">
+          <div class="flex items-baseline gap-3 mb-2">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-krishna-800">
+              {section.name}
+            </h2>
+            <span class="font-sanskrit text-saffron-500 text-lg">{section.sanskrit}</span>
+          </div>
+          <p class="text-krishna-600 leading-relaxed mb-8 max-w-3xl">
+            {section.description}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {section.items.map((item) => (
+              <div class="card p-5 border border-temple-200 hover:border-saffron-300 transition-colors">
+                <h3 class="font-heading font-semibold text-krishna-800 mb-1">{item.name}</h3>
+                <p class="text-sm text-krishna-500 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <p class="section-subheading">
+        Common questions from seekers beginning their journey into Vedic literature.
+      </p>
+
+      <div class="space-y-4">
+        {faq.map((item) => (
+          <details class="group card border border-temple-200">
+            <summary class="p-5 cursor-pointer font-semibold text-krishna-800 flex items-center justify-between hover:text-saffron-600 transition-colors">
+              {item.q}
+              <svg class="w-5 h-5 text-krishna-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 text-krishna-600 leading-relaxed">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

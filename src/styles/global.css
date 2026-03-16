@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-krishna-900 bg-temple-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-saffron-500 text-white font-semibold rounded-lg
+           hover:bg-saffron-600 transition-colors duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border-2 border-krishna-600 text-krishna-600 font-semibold rounded-lg
+           hover:bg-krishna-600 hover:text-white transition-colors duration-200;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-heading font-bold text-krishna-800 text-center mb-4;
+  }
+
+  .section-subheading {
+    @apply text-lg text-krishna-600 text-center max-w-2xl mx-auto mb-12;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+  }
+
+  .sanskrit-text {
+    @apply font-sanskrit text-saffron-700;
+  }
+
+  .gradient-saffron {
+    background: linear-gradient(135deg, #ff8c00 0%, #e07000 50%, #b85500 100%);
+  }
+
+  .gradient-krishna {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2d4bb0 50%, #4a6cf7 100%);
+  }
+
+  .gradient-divine {
+    background: linear-gradient(135deg, #1e3a8a 0%, #5c2a00 30%, #ff8c00 70%, #c4882e 100%);
+  }
+}

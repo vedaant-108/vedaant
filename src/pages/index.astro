@@ -1,0 +1,321 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const featuredVideos = [
+  {
+    title: 'Gayatri Mantra — Meaning & Significance',
+    description: 'Explore the profound meaning behind the most sacred mantra from the Rigveda.',
+    thumbnail: 'https://img.youtube.com/vi/PLACEHOLDER1/maxresdefault.jpg',
+    youtubeId: 'PLACEHOLDER1',
+    category: 'Vedas',
+  },
+  {
+    title: 'Shiv Tandav Stotram',
+    description: 'The powerful hymn describing Lord Shiva\'s cosmic dance of creation and destruction.',
+    thumbnail: 'https://img.youtube.com/vi/PLACEHOLDER2/maxresdefault.jpg',
+    youtubeId: 'PLACEHOLDER2',
+    category: 'Stotram',
+  },
+  {
+    title: 'Bhagavad Gita Chapter 2 — Sankhya Yoga',
+    description: 'Krishna\'s timeless teachings on the nature of the soul and the path of wisdom.',
+    thumbnail: 'https://img.youtube.com/vi/PLACEHOLDER3/maxresdefault.jpg',
+    youtubeId: 'PLACEHOLDER3',
+    category: 'Bhagavad Gita',
+  },
+];
+
+const categories = [
+  {
+    name: 'Vedas',
+    sanskrit: 'वेद',
+    description: 'Rigveda, Yajurveda, Samaveda & Atharvaveda — the foundational scriptures.',
+    icon: '📖',
+    count: 4,
+  },
+  {
+    name: 'Puranas',
+    sanskrit: 'पुराण',
+    description: 'Ancient narratives of the history of the universe and its divine beings.',
+    icon: '📜',
+    count: 18,
+  },
+  {
+    name: 'Bhagavad Gita',
+    sanskrit: 'भगवद्गीता',
+    description: 'The Song of God — Lord Krishna\'s counsel to Arjuna on dharma and life.',
+    icon: '🙏',
+    count: 18,
+  },
+  {
+    name: 'Upanishads',
+    sanskrit: 'उपनिषद्',
+    description: 'Philosophical texts exploring the nature of reality, self, and Brahman.',
+    icon: '🕉️',
+    count: 108,
+  },
+  {
+    name: 'Samhitas',
+    sanskrit: 'संहिता',
+    description: 'Collections of mantras and hymns — the core textual layer of each Veda.',
+    icon: '🔔',
+    count: 4,
+  },
+  {
+    name: 'Vedangas',
+    sanskrit: 'वेदाङ्ग',
+    description: 'The six auxiliary disciplines for understanding and practicing Vedic wisdom.',
+    icon: '✨',
+    count: 6,
+  },
+];
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 gradient-divine opacity-95"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
+      <p class="text-saffron-300 font-sanskrit text-lg md:text-xl mb-4 tracking-wide">
+        ॐ असतो मा सद्गमय
+      </p>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
+        Discover the Timeless Wisdom <br class="hidden md:block" />
+        of <span class="text-saffron-400">Sanatan Dharma</span>
+      </h1>
+      <p class="text-lg md:text-xl text-krishna-200 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Explore the sacred verses, devotional songs, and profound teachings from the Vedas,
+        Puranas, Bhagavad Gita, and other ancient scriptures — with meanings, translations,
+        and spiritual insights.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/videos" class="btn-primary text-lg px-8 py-4">
+          Watch Videos
+        </a>
+        <a href="/library" class="btn-secondary border-white text-white hover:bg-white hover:text-krishna-800 text-lg px-8 py-4">
+          Explore Scriptures
+        </a>
+      </div>
+
+      <p class="mt-12 text-krishna-300 font-sanskrit text-sm">
+        तमसो मा ज्योतिर्गमय ।
+      </p>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="section-heading">
+          What is <span class="text-saffron-600">VedPuraan</span>?
+        </h2>
+        <p class="text-krishna-600 text-lg leading-relaxed mb-6">
+          VedPuraan is a platform dedicated to making the ancient wisdom of Sanatan Dharma
+          accessible to everyone. Through carefully crafted videos, podcasts, and written content,
+          we bring the teachings of the Vedas, Puranas, and other sacred texts to seekers worldwide.
+        </p>
+        <p class="text-krishna-600 text-lg leading-relaxed mb-8">
+          Whether you're looking to understand the meaning of Sanskrit hymns, explore the
+          philosophy of the Upanishads, or simply find peace through devotional music —
+          VedPuraan is your companion on this spiritual journey.
+        </p>
+        <a href="/about" class="text-saffron-600 font-semibold hover:text-saffron-700 transition-colors">
+          Learn more about our mission &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Videos -->
+  <section class="py-20 bg-temple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Featured Videos</h2>
+      <p class="section-subheading">
+        Sacred songs and hymns from Vedic literature — with meanings, pronunciation guides,
+        and spiritual significance.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {featuredVideos.map((video) => (
+          <div class="card group">
+            <div class="relative aspect-video bg-krishna-100 flex items-center justify-center">
+              <div class="text-center p-4">
+                <svg class="w-16 h-16 text-saffron-400 mx-auto mb-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <span class="text-xs text-krishna-400">Video Preview</span>
+              </div>
+              <span class="absolute top-3 left-3 bg-saffron-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                {video.category}
+              </span>
+            </div>
+            <div class="p-5">
+              <h3 class="font-heading font-semibold text-krishna-800 text-lg mb-2 group-hover:text-saffron-600 transition-colors">
+                {video.title}
+              </h3>
+              <p class="text-sm text-krishna-500 leading-relaxed">
+                {video.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/videos" class="btn-secondary">
+          View All Videos &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripture Categories -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Explore the Scriptures</h2>
+      <p class="section-subheading">
+        Dive into the vast ocean of Vedic knowledge — organized by scripture, topic, and tradition.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.map((cat) => (
+          <a href={`/library#${cat.name.toLowerCase().replace(/\s+/g, '-')}`} class="card p-6 group hover:border-saffron-200 border border-transparent transition-all">
+            <div class="flex items-start gap-4">
+              <span class="text-3xl">{cat.icon}</span>
+              <div>
+                <div class="flex items-baseline gap-2 mb-1">
+                  <h3 class="font-heading font-semibold text-krishna-800 text-lg group-hover:text-saffron-600 transition-colors">
+                    {cat.name}
+                  </h3>
+                  <span class="font-sanskrit text-saffron-500 text-sm">{cat.sanskrit}</span>
+                </div>
+                <p class="text-sm text-krishna-500 leading-relaxed">
+                  {cat.description}
+                </p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Podcasts Preview -->
+  <section class="py-20 bg-krishna-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+        Spiritual Podcasts
+      </h2>
+      <p class="text-lg text-krishna-300 max-w-2xl mx-auto mb-10">
+        Listen to thoughtful discussions on dharma, karma, meditation, and the deeper
+        teachings of ancient Indian wisdom — wherever you are.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-krishna-700/50 backdrop-blur rounded-xl p-6 text-left border border-krishna-600">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-saffron-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <span class="text-saffron-400 text-xs font-semibold uppercase tracking-wider">Coming Soon</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">Understanding Karma</h3>
+          <p class="text-sm text-krishna-300">What the Gita really teaches about action, intention, and consequence.</p>
+        </div>
+        <div class="bg-krishna-700/50 backdrop-blur rounded-xl p-6 text-left border border-krishna-600">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-saffron-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <span class="text-saffron-400 text-xs font-semibold uppercase tracking-wider">Coming Soon</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">The Path of Bhakti</h3>
+          <p class="text-sm text-krishna-300">Exploring devotion as a transformative spiritual practice across traditions.</p>
+        </div>
+        <div class="bg-krishna-700/50 backdrop-blur rounded-xl p-6 text-left border border-krishna-600">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-saffron-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <span class="text-saffron-400 text-xs font-semibold uppercase tracking-wider">Coming Soon</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">Vedic Cosmology</h3>
+          <p class="text-sm text-krishna-300">The universe as described in the Puranas — cycles of creation and dissolution.</p>
+        </div>
+      </div>
+      <a href="/podcasts" class="btn-primary">
+        Explore Podcasts &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-temple-50" id="contact">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading">Connect With Us</h2>
+      <p class="section-subheading">
+        Have questions about a scripture? Want to suggest a topic? We'd love to hear from you.
+      </p>
+
+      <div class="max-w-xl mx-auto">
+        <div class="card p-8">
+          <div class="space-y-6 text-center">
+            <div>
+              <h3 class="font-semibold text-krishna-800 mb-2">Follow Our Journey</h3>
+              <a
+                href="https://youtube.com/@vedpuraan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-ganesh-600 hover:text-ganesh-700 font-medium transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+                  <path fill="#fff" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                Subscribe on YouTube
+              </a>
+            </div>
+
+            <div class="border-t border-temple-200 pt-6">
+              <h3 class="font-semibold text-krishna-800 mb-2">Get in Touch</h3>
+              <a
+                href="mailto:contact@vedpuraan.com"
+                class="text-saffron-600 hover:text-saffron-700 font-medium transition-colors"
+              >
+                contact@vedpuraan.com
+              </a>
+            </div>
+
+            <div class="border-t border-temple-200 pt-6">
+              <p class="text-sm text-krishna-500 font-sanskrit">
+                सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः ।<br />
+                सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत् ॥
+              </p>
+              <p class="text-xs text-krishna-400 mt-2 italic">
+                May all beings be happy. May all beings be free from illness.
+                May all beings see auspiciousness. May no one suffer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

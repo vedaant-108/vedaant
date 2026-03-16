@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const upcomingEpisodes = [
+  {
+    title: 'Understanding Karma — Beyond Good and Bad',
+    description: 'What the Bhagavad Gita truly teaches about action, intention, and the fruits of karma. We explore the nuances beyond the popular understanding.',
+    topic: 'Philosophy',
+    duration: '~35 min',
+  },
+  {
+    title: 'The Path of Bhakti — Devotion as Transformation',
+    description: 'How the Bhakti tradition across Vaishnavism and Shaivism uses love and surrender as a vehicle for spiritual awakening.',
+    topic: 'Bhakti',
+    duration: '~40 min',
+  },
+  {
+    title: 'Vedic Cosmology — Cycles of Creation',
+    description: 'The Puranic view of the universe — yugas, kalpas, and the cosmic dance of creation, preservation, and dissolution.',
+    topic: 'Cosmology',
+    duration: '~45 min',
+  },
+  {
+    title: 'Who Am I? — Atman in the Upanishads',
+    description: 'Exploring the Upanishadic inquiry into the nature of the Self, consciousness, and the relationship between Atman and Brahman.',
+    topic: 'Upanishads',
+    duration: '~30 min',
+  },
+  {
+    title: 'Dharma in Daily Life',
+    description: 'How to apply the timeless principles of dharma — duty, righteousness, and cosmic order — in modern everyday situations.',
+    topic: 'Dharma',
+    duration: '~25 min',
+  },
+  {
+    title: 'The Yoga of the Gita — Beyond Asanas',
+    description: 'Karma Yoga, Jnana Yoga, Bhakti Yoga, and Dhyana Yoga — the four paths as taught by Lord Krishna.',
+    topic: 'Bhagavad Gita',
+    duration: '~35 min',
+  },
+];
+
+const topics = ['Philosophy', 'Bhakti', 'Cosmology', 'Upanishads', 'Dharma', 'Bhagavad Gita', 'Meditation', 'Sanskrit'];
+---
+
+<Layout title="Podcasts" description="Listen to spiritual discussions on dharma, karma, meditation, and the teachings of Vedic scriptures.">
+  <!-- Page Header -->
+  <section class="bg-krishna-800 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-saffron-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+        Coming Soon
+      </span>
+      <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+        Spiritual Podcasts
+      </h1>
+      <p class="text-lg text-krishna-300 max-w-2xl mx-auto">
+        Thoughtful conversations on dharma, karma, meditation, and the deeper
+        teachings of Sanatan Dharma — coming to your ears soon.
+      </p>
+    </div>
+  </section>
+
+  <!-- Topics -->
+  <section class="bg-white border-b border-temple-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <h3 class="text-sm font-semibold text-krishna-500 uppercase tracking-wider mb-3">Topics we'll cover</h3>
+      <div class="flex flex-wrap gap-2">
+        {topics.map((topic) => (
+          <span class="px-3 py-1.5 bg-temple-100 text-krishna-700 text-sm rounded-full font-medium">
+            {topic}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Episodes -->
+  <section class="py-16 bg-temple-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-heading font-bold text-krishna-800 mb-8 flex items-center gap-3">
+        <span class="w-1 h-8 bg-saffron-500 rounded-full"></span>
+        Planned Episodes
+      </h2>
+
+      <div class="space-y-4">
+        {upcomingEpisodes.map((episode, i) => (
+          <div class="card p-6 flex flex-col sm:flex-row gap-4 items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-krishna-100 flex items-center justify-center">
+              <span class="text-krishna-600 font-heading font-bold">{String(i + 1).padStart(2, '0')}</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold uppercase tracking-wider text-saffron-600 bg-saffron-50 px-2 py-0.5 rounded">
+                  {episode.topic}
+                </span>
+                <span class="text-xs text-krishna-400">{episode.duration}</span>
+              </div>
+              <h3 class="font-heading font-semibold text-krishna-800 text-lg mb-1">
+                {episode.title}
+              </h3>
+              <p class="text-sm text-krishna-500 leading-relaxed">
+                {episode.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Notify CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-16 h-16 rounded-full gradient-saffron flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+        </svg>
+      </div>
+      <h2 class="text-2xl font-heading font-bold text-krishna-800 mb-3">
+        Stay Updated
+      </h2>
+      <p class="text-krishna-500 mb-6">
+        Subscribe to our YouTube channel to be the first to know when our podcast launches.
+      </p>
+      <a
+        href="https://youtube.com/@vedpuraan"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        Subscribe on YouTube
+      </a>
+    </div>
+  </section>
+</Layout>
